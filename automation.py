@@ -7,10 +7,11 @@ chrome_browser.get( 'https://www.seleniumeasy.com/test/basic-first-form-demo.htm
 
 assert('Selenium Easy Demo' in chrome_browser.title)
 
+#ways to get some elements in a website
 show_message_button = chrome_browser.find_element_by_class_name('btn-default')
 user_button2 = chrome_browser.find_element_by_css_selector('#get-input > .btn')
 
-
+#always using assert to check if the information is true
 assert('Show Message' in chrome_browser.page_source)
 
 user_massage = chrome_browser.find_element_by_id('user-message')
@@ -22,5 +23,6 @@ output_message = chrome_browser.find_element_by_id('display')
 
 assert('I am Python dev' in output_message.text)
 
+#chrome_browser.quit() - quit or close your pages
 print(user_button2)
 print(show_message_button)
